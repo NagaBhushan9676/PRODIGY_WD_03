@@ -1,0 +1,84 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform:uppercase;
+    color: aliceblue !important;
+}
+body{
+    background-image: url("./Img/cat.png");
+    background-size: cover;
+    background-position: center;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 400px;
+}
+.title{
+    margin-top:20px ;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 300;
+    font-family: 'DM Sans';  
+    animation: ani 3s ease 0s 2 linear ;
+}
+#tileBlock{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    margin-bottom: 20px;
+    grid-gap: 5px;
+
+}
+.tile{
+    cursor: pointer;
+    width: 100px;
+    height: 75px;
+    line-height: 75px;
+    font-size: 50px;
+    text-align: center;
+    vertical-align: middle;
+    box-sizing: border-box;
+    border: 1px solid rgb(244, 244, 244);
+    transition: all 1s ease;
+    font-family:'Courier New', Courier, monospace;
+    background-color: rgba(0, 0, 0, 0.4);  
+
+}
+.tile:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 4px 10px rgb(82, 237, 188);
+    border-radius: 7px;
+}
+.but{
+    display: inline-flex;
+    justify-content: center;
+    margin: 15px 0px 5px 20px;
+}
+button, label{
+   width:200px !important;
+    transition: all 1s ease !important;
+}
+button:hover,label:hover{
+    transform: scale(1.1) !important;
+}
+.f1:hover{
+    animation: f11 3s infinite linear  !important;
+}
+.f2:hover{
+    animation: f12 3s linear infinite;
+}
+@keyframes f11 {
+    10%{ transform: translateY(10px); }
+    50%{  transform: translateY(100px); }
+    70%{  transform: translateY(10px);}
+    100%{  transform: translateY(10px);  }
+}
+@keyframes f11 {
+    10%{ transform: translateX(10px); }
+    50%{  transform: translateX(100px); }
+    70%{  transform: translateX(10px);}
+    100%{  transform: translateX(10px);  }
+}
